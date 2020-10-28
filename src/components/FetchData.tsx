@@ -44,19 +44,43 @@ class FetchData extends React.PureComponent<WeatherForecastProps> {
       <table className='table table-striped' aria-labelledby="tabelLabel">
         <thead>
           <tr>
-            <th>Date</th>
-            <th>Temp. (C)</th>
-            <th>Temp. (F)</th>
-            <th>Summary</th>
+            <th>№</th>
+            <th>№ л.д.</th>
+            <th>Фамилия</th>
+            <th>Имя</th>
+            <th>Отчество</th>
+            <th>Источник фин-я</th>
+            <th>Сумма баллов</th>
+            <th>Математика(39)</th>
+            <th>Физика(40)</th>
+            <th>Русский язык(40)</th>
+            <th>Инд. дос.</th>
+            <th>Прием.</th>
+            <th>Согласие</th>
+            <th>Тип конкурса</th>
+            <th>Нуж-ся в общ-и</th>
+            <th>Итог зач-я</th>
           </tr>
         </thead>
         <tbody>
           {this.props.forecasts.map((forecast: WeatherForecastsStore.WeatherForecast) =>
             <tr key={forecast.id}>
               <td>{forecast.id}</td>
+              <td>{forecast.id}</td>
               <td>{forecast.lastName}</td>
-              <td>{forecast.temperatureF}</td>
-              <td>{forecast.summary}</td>
+              <td>{forecast.firstName}</td>
+              <td>{forecast.middleName}</td>
+              <td>{forecast.financing}</td>
+              <td>{forecast.math+forecast.phys+forecast.rusL+forecast.sport+forecast.diploma+forecast.volunteer+forecast.contests+forecast.essay}</td>
+              <td>{forecast.math}</td>
+              <td>{forecast.phys}</td>
+              <td>{forecast.rusL}</td>
+              <td>{forecast.sport+forecast.diploma+forecast.volunteer+forecast.contests+forecast.essay}</td>
+              <td>{forecast.advantage}</td>
+              <td>{forecast.consent}</td>
+              <td>{forecast.competition}</td>
+              <td>{forecast.hostel}</td>
+              <td>{forecast.enrollment}</td>
             </tr>
           )}
         </tbody>

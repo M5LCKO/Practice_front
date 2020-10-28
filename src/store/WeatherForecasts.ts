@@ -11,11 +11,25 @@ export interface WeatherForecastsState {
 }
 
 export interface WeatherForecast {
+    count: number;
     id: number;
 	lastName: string;
-    temperatureC: number;
-    temperatureF: number;
-    summary: string;
+    firstName: string;
+    middleName: string;
+    financing: number;
+    math: number;
+    phys: number;
+    rusL: number;
+    sport: number;
+    diploma: number;
+    volunteer: number;
+    contests: number;
+    essay: number;
+    advantage: number;
+    consent: number;
+    competition: number;
+    hostel: number;
+    enrollment: number;
 }
 
 // -----------------
